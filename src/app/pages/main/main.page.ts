@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPage implements OnInit {
 
+  router = inject(Router);
+  currentPath: string = '';
+
+  pages = [
+    { title: 'Inicio', url: '/main/home', icon: 'home-outline'},
+    { title: 'Perfile', url: '/main/profile', icon: 'person-outline'}
+  ]
+
   constructor() { }
 
   ngOnInit() {
+    this.router.events.subscribe((event: any) => {
+      if (event?.url) this.currentPath = event.url;
+    });
+
+    // console.log(this.pages);
   }
+
 
 }
