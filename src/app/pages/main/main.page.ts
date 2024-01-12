@@ -13,7 +13,7 @@ export class MainPage implements OnInit {
 
   pages = [
     { title: 'Inicio', url: '/main/home', icon: 'home-outline'},
-    { title: 'Perfile', url: '/main/profile', icon: 'person-outline'}
+    { title: 'Perfil', url: '/main/profile', icon: 'person-outline'}
   ]
 
   constructor() { }
