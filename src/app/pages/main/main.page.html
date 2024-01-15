@@ -2,11 +2,13 @@
 
   <app-header title="Menú"></app-header>
 
-  <ion-content class="ion-text">
+  <ion-content class="ion-text-center">
 
     <ion-avatar>
       <ion-icon class="empty-icon" name="person-circle-outline"></ion-icon>
     </ion-avatar>
+
+    <h4>Norberto</h4>
 
     <ion-menu-toggle autoHide="false" *ngFor="let page of pages">
       <ion-item [ngClass]="{'active': currentPath === page.url}" [routerLink]="page.url" routerDirection="root" detail>
