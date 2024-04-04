@@ -1,19 +1,18 @@
-<ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
-
+<ion-menu contentId="menu-content" menuId="menu-content" side="start">
   <app-header title="Menú"></app-header>
+  
+  <ion-content class="ion-text-center" >
 
-  <ion-content class="ion-text-center">
-
-    <ion-avatar>
-      <ion-icon class="empty-icon" name="person-circle-outline"></ion-icon>
+    <ion-avatar>    
+        <ion-icon class="empty-icon" name="person-circle-outline"></ion-icon>
     </ion-avatar>
 
-    <h4>Norberto</h4>
+    <h4> Alonso Nava </h4>
 
-    <ion-menu-toggle autoHide="false" *ngFor="let page of pages">
-      <ion-item [ngClass]="{'active': currentPath === page.url}" [routerLink]="page.url" routerDirection="root" detail>
-        <ion-icon slot="start" [name]="page.icon"></ion-icon>
-        <ion-label>{{page.title}}</ion-label>
+    <ion-menu-toggle autoHide="false" *ngFor="let p of pages">
+      <ion-item [ngClass]="{'active': currentPath === p.url}" [routerLink]="p.url" routerDirection="root" detail>
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>{{ p.title }}</ion-label>
       </ion-item>
     </ion-menu-toggle>
   </ion-content>
