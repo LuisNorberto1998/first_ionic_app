@@ -1,3 +1,15 @@
-<p>
-  login-input works!
-</p>
+<ion-item class="custom-input" lines="none">
+
+  <ion-icon *ngIf="icon" slot="start" [name]="icon" color="primary"></ion-icon>
+
+  <ion-input 
+    [type]="type" 
+    [placeholder]="autocomplete"
+    [label]="label"
+    label-placement="floating">
+  </ion-input>
+
+  <ion-button fill="clear" shape="round">
+    <ion-icon slot="" name="eye-outline"></ion-icon>
+  </ion-button>
+</ion-item>
